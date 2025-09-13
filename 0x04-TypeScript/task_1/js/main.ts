@@ -15,11 +15,11 @@ const teacher1: Teacher = {
   contract: true,
 };
 
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
-const director: Directors = {
+const director: Director = {
   firstName: "John",
   lastName: "Doe",
   fullTimeEmployee: true,
