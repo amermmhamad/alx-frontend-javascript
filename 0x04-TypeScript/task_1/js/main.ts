@@ -14,3 +14,15 @@ const teacher1: Teacher = {
   location: "Cairo",
   contract: true,
 };
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director: Directors = {
+  firstName: "John",
+  lastName: "Doe",
+  fullTimeEmployee: true,
+  location: "New York",
+  numberOfReports: 17,
+};
