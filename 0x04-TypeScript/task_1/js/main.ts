@@ -41,16 +41,16 @@ function printTeacher({
   return `${firstName}. ${lastName}`;
 }
 
-interface studentClassInterface {
+interface StudentClassInterface {
   workOnHomework(): string;
-  displayname(): string;
+  displayName(): string;
 }
 
-interface studentConstructor {
-  new (firstName: string, lastName: string): studentClassInterface;
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-class StudentClass implements studentClassInterface {
+class StudentClass implements StudentClassInterface {
   private firstName: string;
   private lastName: string;
 
@@ -60,10 +60,15 @@ class StudentClass implements studentClassInterface {
   }
 
   workOnHomework(): string {
-    return "Currently Working";
+    return "Currently working";
   }
 
-  displayname(): string {
+  displayName(): string {
     return this.firstName;
   }
 }
+
+// Example usage
+const student: StudentClassInterface = new StudentClass("John", "Doe");
+console.log(student.displayName());
+console.log(student.workOnHomework());
