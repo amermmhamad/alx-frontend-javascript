@@ -50,7 +50,7 @@ interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   private firstName: string;
   private lastName: string;
 
@@ -68,7 +68,7 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
-const student: StudentClassInterface = new StudentClass("John", "Doe");
+// Example test
+const student = new StudentClass("John", "Doe");
 console.log(student.displayName());
 console.log(student.workOnHomework());
